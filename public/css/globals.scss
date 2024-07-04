@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: #f5f7fa;
+  --background-end-rgb: 255, 255, 255;
+  --text-primary-green: #4caf4f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  padding: 1rem;
+
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    flex: 1;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 15px;
+  position: sticky;
+  top: 1;
+  border-bottom: 1px solid #263238;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      height: 20px;
+    }
+
+    .logoText {
+      font-size: 20px;
+      font-weight: 600;
+      color: #263238;
+    }
+  }
+  .navbarItems{
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+    color: #18191f;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .signinButtons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    button{
+      width: 77px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .loginbutton {
+      color: var(--text-primary-green);
+    }
+    .signupbutton{
+      color: #f5f7fa;
+      background-color: var(--text-primary-green);
+    }
+    .theme{
+      margin: 0px 15px;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
