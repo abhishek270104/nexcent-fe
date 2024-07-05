@@ -1,6 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Navbar from '../components/navbar';
 const Header = () => {
+  const [theme, setTheme] = useState<"light" | "dark">("light")
+  const toggleTheme = (prev: string) => {
+    if(prev === "light") {
+      setTheme("dark")
+    }
+    else{
+      setTheme("light")
+    }
+  }
   return (
     <div className='header'>
       <div className='logo'>
@@ -12,7 +22,7 @@ const Header = () => {
         <button className='loginbutton'>Login</button>
         <button className='signupbutton'>Signup</button>
         <span className='theme'>
-          <img src='/images/dark-theme.svg' />
+          <img src={theme === "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(theme)}/>
         </span>
       </div>
 
