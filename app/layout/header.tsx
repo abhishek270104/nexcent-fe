@@ -1,9 +1,16 @@
 'use client'
 import React, { useState } from 'react'
 import Navbar from '../components/navbar';
+import { useTheme } from 'next-themes';
+import { UseThemeProps } from 'next-themes/dist/types';
+
 const Header = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light")
-  const toggleTheme = (prev: string) => {
+  //const [theme, setTheme] = useState<"light" | "dark">("light")
+  const {resolvedTheme, theme, setTheme} : UseThemeProps = useTheme()
+  const toggleTheme = (prev: string | undefined) => {
+    if(prev === undefined) {
+      setTheme("light")
+    }
     if(prev === "light") {
       setTheme("dark")
     }
@@ -22,7 +29,7 @@ const Header = () => {
         <button className='loginbutton'>Login</button>
         <button className='signupbutton'>Signup</button>
         <span className='theme'>
-          <img src={theme === "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(theme)}/>
+          <img src={resolvedTheme === "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(resolvedTheme)}/>
         </span>
       </div>
 

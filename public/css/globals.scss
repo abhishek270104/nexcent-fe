@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #f5f7fa;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #000000;
+  --background-start-rgb: #ffffff;
+  --background-end-rgb: #ffffff;
   --text-primary-green: #4caf4f;
   --text-primary-color: #4d4d4d;
   --text-secondary-color: #717171;
@@ -13,9 +13,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: #ffffff;
+    --background-start-rgb: #000000;
+    --background-end-rgb: #000000;
     --text-primary-green: #4CAF4F;
     --text-primary-color: #808080;
     --text-secondary-color: #717171;
@@ -23,9 +23,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
-  padding: 10px 70px;
+  color: var(--foreground-rgb);
+  background: var(--background-start-rgb);
 
 }
 
@@ -40,7 +39,8 @@ body {
   align-items: center;
   padding: 20px 0;
   position: sticky;
-
+  background-color: #f5f7fa;
+  padding: 10px 70px;
   .logo {
     display: flex;
     align-items: center;
@@ -110,7 +110,9 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 48px;
-
+  section{
+    padding: 10px 70px;
+  }
   .appMainHeading {
     color: var(--text-primary-color);
     font-weight: 600;
@@ -177,9 +179,81 @@ body {
   }
   .suitable {
     display: flex;
-    gap: 8rem;
+    .image{
+      width: 40%;
+    }
+    .content{
+      width: 60%;
+    }
+    .appMainHeading{
+      margin-left: 0 !important;
+    }
 
   }
+    .achievements {
+      background-color: #f5f7fa;
+      display: flex;
+      .sectionHeading {
+        padding: auto;
+        width: 50%;
+        h2 {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 44px;
+        }
+  
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--text-secondary-color);
+        }
+  
+        .greenText {
+          color: var(--text-primary-green);
+        }
+  
+        .primaryText {
+          color: var(--text-primary-color);
+        }
+      }
+      .countItem{
+        width: 255px;
+        padding: 20px;
+        img{
+          padding: 10px;
+        }
+        h3{
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 36px;
+          color: var(--text-primary-color);
+        }
+        p{
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--text-secondary-color);
+        }
+      }
+    }
+    .customers {
+      display: flex;
+      background-color: #f5f7fa;
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+      .squareBox {
+        height: 320px;
+        width: 320px;
+        padding: 0;
+        border-radius: 8px;
+        box-shadow: 0px 8px 16px 0px #ABBED166;
+        overflow: hidden;
+        img{
+          height: 100%;
+        }
+      }
+    }
 }
 @layer utilities {
   .text-balance {
