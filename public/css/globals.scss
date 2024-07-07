@@ -13,19 +13,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: rgb(255, 255, 255);
-    --background-start-rgb: rgb(0, 0, 0);
-    --background-end-rgb: rgb(0, 0, 0);
-    --text-primary-green: #4CAF4F;
-    --text-primary-color: #808080;
-    --text-secondary-color: #717171;
+  --foreground-rgb: rgb(255, 255, 255);
+  --background-start-rgb: rgb(0, 0, 0);
+  --background-end-rgb: rgb(0, 0, 0);
+  --text-primary-green: #4CAF4F;
+  --text-primary-color: #808080;
+  --text-secondary-color: #717171;
   }
 }
 
 body {
   color: var(--foreground-rgb);
   background: var(--background-start-rgb);
-
+  overflow-x: hidden;
 }
 
 .home {
@@ -37,10 +37,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
   position: sticky;
   background-color: #f5f7fa;
-  padding: 10px 70px;
+  padding: 30px 70px;
 
   .logo {
     display: flex;
@@ -108,12 +107,74 @@ body {
 }
 
 .mainContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   section {
-    padding: 10px 70px;
+    padding: 50px 70px;
+  }
+
+  .carouselSlide {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 140px;
+    background-color: #f5f7fa;
+    position: relative;
+    transition: transform 0.5s ease;
+
+    .slide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      min-width: 90vw;
+      transition: transform 0.5s ease;
+
+      .heading {
+        color: var(--text-primary-color);
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 76px;
+      }
+
+      .duration {
+        color: var(--text-primary-green);
+        font-weight: 600;
+        font-size: 64px;
+        line-height: 76px;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-secondary-color);
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+    }
+
+  }
+
+  .dots {
+    display: flex;
+    gap: 8px;
+
+    .dot {
+      position: relative;
+      top: -40px;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      border: 1px solid var(--text-primary-green);
+      background-color: var(--text-primary-green);
+      opacity: 0.3;
+    }
+
+    .active {
+      opacity: 1;
+    }
   }
 
   .appMainHeading {
@@ -156,7 +217,7 @@ body {
   .clients {
     .clientLogoBox {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 
@@ -353,7 +414,7 @@ body {
 
   .upper {
     background-color: #f5f7fa;
-
+    padding: 50px 70px;
     h2 {
       color: #263238;
       font-size: 64px;
@@ -378,8 +439,8 @@ body {
     background-color: #263238;
 
     .lower {
-      max-width: 80%;
-
+      max-width: 90%;
+      padding: 50px 70px;
       .logo {
         display: flex;
         align-items: center;
