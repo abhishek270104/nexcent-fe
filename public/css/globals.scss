@@ -9,16 +9,20 @@
   --text-primary-green: #4caf4f;
   --text-primary-color: #4d4d4d;
   --text-secondary-color: #717171;
+  --muted-dark-color: #f5f7fa;
+  --muted-light-color: #263238;
 }
 
-@media (prefers-color-scheme: dark) {
   :root {
+    .dark{
   --foreground-rgb: rgb(255, 255, 255);
   --background-start-rgb: rgb(0, 0, 0);
   --background-end-rgb: rgb(0, 0, 0);
   --text-primary-green: #4CAF4F;
   --text-primary-color: #808080;
   --text-secondary-color: #717171;
+  --muted-dark-color: #263238;
+  --muted-light-color: #f5f7fa;
   }
 }
 
@@ -38,7 +42,7 @@ body {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  background-color: #f5f7fa;
+  background-color: var(--muted-dark-color);
   padding: 30px 70px;
 
   .logo {
@@ -53,7 +57,7 @@ body {
     .logoText {
       font-size: 21px;
       font-weight: 600;
-      color: #263238;
+      color: var(--muted-light-color);
     }
   }
 
@@ -63,7 +67,7 @@ body {
 
     li {
       padding: 5px;
-      color: #18191f;
+      color: var(--muted-light-color);
       font-size: 16px;
       line-height: 24px;
       font-weight: 500;
@@ -95,7 +99,7 @@ body {
     }
 
     .signupbutton {
-      color: #f5f7fa;
+      color: var(--muted-dark-color);
       background-color: var(--text-primary-green);
     }
 
@@ -119,7 +123,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 140px;
-    background-color: #f5f7fa;
+    background-color: var(--muted-dark-color);
     position: relative;
     transition: transform 0.5s ease;
 
@@ -197,7 +201,7 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
-
+  
   .cardContent {
     font-weight: 400;
     color: var(--text-secondary-color);
@@ -206,7 +210,7 @@ body {
   }
 
   .greenButton {
-    color: #f5f7fa;
+    color: var(--muted-dark-color);
     background-color: var(--text-primary-green);
     padding: 14px 32px;
     border-radius: 4px;
@@ -231,7 +235,8 @@ body {
       padding: 24px 32px 24px 32px;
       gap: 8px;
       border-radius: 8px;
-      opacity: 0px;
+      opacity: 1;
+      background-color: var(--muted-dark-color);
       box-shadow: 0px 2px 4px 0px #ABBED133;
 
       .cardImage {
@@ -267,7 +272,7 @@ body {
   }
 
   .achievements {
-    background-color: #f5f7fa;
+    background-color: var(--muted-dark-color);
     display: flex;
 
     .sectionHeading {
@@ -322,7 +327,7 @@ body {
 
   .customers {
     display: flex;
-    background-color: #f5f7fa;
+    background-color: var(--muted-dark-color);
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
 
@@ -382,7 +387,7 @@ body {
       position: relative;
       top: -25%;
       max-height: 176px;
-      background-color: #f5f7fa;
+      background-color: var(--muted-dark-color);
       padding: 16px;
       gap: 16px;
       margin-left: 24px;
@@ -413,10 +418,10 @@ body {
   flex-direction: column;
 
   .upper {
-    background-color: #f5f7fa;
+    background-color: var(--muted-dark-color);
     padding: 50px 70px;
     h2 {
-      color: #263238;
+      color: var(--muted-light-color);
       font-size: 64px;
       line-height: 76px;
       font-weight: 600;
@@ -425,7 +430,7 @@ body {
     }
 
     button {
-      color: #f5f7fa;
+      color: var(--muted-dark-color);
       background-color: var(--text-primary-green);
       padding: 14px 32px;
       border-radius: 4px;
