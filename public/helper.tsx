@@ -31,7 +31,7 @@ export const carouselSlides: ICarousel[] = [
                 <button className="greenButton">Register</button>
             </div>
             <div>
-                <img src="/images/carousel-template-image.svg" alt="carousel_image" />
+                <Image src="/images/carousel-template-image.svg" alt="carousel_image" />
             </div>
         </div> ,
         url: "",
@@ -40,7 +40,7 @@ export const carouselSlides: ICarousel[] = [
         id: 2,
         component: <div className='slide mx-auto mb-10'>
             <div>
-                <img src="/images/carousel-template-image.svg" alt="carousel_image" />
+                <Image src="/images/carousel-template-image.svg" alt="carousel_image" />
             </div>
             <div className=''>
                 <h2 className="heading">Lessons and insights 2</h2>
@@ -61,7 +61,7 @@ export const carouselSlides: ICarousel[] = [
                 <button className="greenButton">Register</button>
             </div>
             <div>
-                <img src="/images/carousel-template-image.svg" alt="carousel_image" />
+                <Image src="/images/carousel-template-image.svg" alt="carousel_image" />
             </div>
         </div>,
         url: "",

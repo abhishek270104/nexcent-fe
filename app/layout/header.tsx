@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from '../components/navbar';
 import { useTheme } from 'next-themes';
 import { UseThemeProps } from 'next-themes/dist/types';
+import Image from 'next/image';
 
 const Header = () => {
   const { resolvedTheme, theme, setTheme }: UseThemeProps = useTheme()
@@ -25,7 +26,7 @@ const Header = () => {
     <>
       {mounted ? <header className='header'>
         <div className='logo'>
-          <img src={resolvedTheme == "light" ? '/images/logo.svg' : '/images/logo-white.svg'} alt="logo" />
+          <Image src={resolvedTheme == "light" ? '/images/logo.svg' : '/images/logo-white.svg'} alt="logo" />
           <span className='logoText'>Nexcent</span>
         </div>
         <Navbar />
@@ -33,7 +34,7 @@ const Header = () => {
           <button className='loginbutton'>Login</button>
           <button className='signupbutton'>Signup</button>
           <span className='theme'>
-            <img src={resolvedTheme == "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(resolvedTheme)} />
+            <Image src={resolvedTheme == "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(resolvedTheme)} alt=''/>
           </span>
         </div>
 

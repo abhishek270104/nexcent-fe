@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import React from 'react'
 
 const Calender = () => {
     return (
         <section className="calender">
             <div className='image'>
-                <img src="/images/signup.svg" />
+                <Image src="/images/signup.svg" alt=''/>
             </div>
             <div className='content'>
                 <h2 className="appMainHeading mx-0 mb-4">How to design your site footer like we did</h2>

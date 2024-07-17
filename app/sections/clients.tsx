@@ -1,4 +1,5 @@
 import { clientData, IClient } from '@/public/helper'
+import Image from 'next/image';
 import React from 'react'
 
 const Clients = () => {
@@ -10,7 +11,7 @@ const Clients = () => {
             </div>
             <div className="clientLogoBox">
                 {clientData.map((data: IClient, index: number) => (
-                    <img src={data.imageURL} alt="client" key={index} />
+                    <Image src={data.imageURL} alt="client" key={index} />
                 )
                 )}
             </div>

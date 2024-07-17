@@ -1,4 +1,5 @@
 import { clientData, IClient } from '@/public/helper'
+import Image from 'next/image';
 import React from 'react'
 
 const Customers = () => {
@@ -6,7 +7,7 @@ const Customers = () => {
         <section className="customers">
             <div className='mr-20'>
                 <div className="squareBox">
-                    <img src="/images/tesla.png" alt="" />
+                    <Image src="/images/tesla.png" alt="" />
                 </div>
             </div>
             <div className="content px-20">
@@ -16,10 +17,10 @@ const Customers = () => {
                 <div className='flex justify-between mt-10'>
                     <div className='logoBox flex align-middle gap-12'>
                         {clientData.slice(0, 6).map((customer: IClient, index: number) => (
-                            <img src={customer.imageURL} alt={customer.name} key={index} />
+                            <Image src={customer.imageURL} alt={customer.name} key={index} />
                         ))}
                     </div>
-                    <button className='link customerName flex gap-4'>Meet all customers <img src="/images/right-arrow.svg" alt="" /></button>
+                    <button className='link customerName flex gap-4'>Meet all customers <Image src="/images/right-arrow.svg" alt="" /></button>
                 </div>
             </div>
 

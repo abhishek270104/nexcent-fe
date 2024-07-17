@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Cards = () => {
@@ -5,21 +6,21 @@ const Cards = () => {
       <>
           <div className="card">
             <div>
-                <img className="cardImage" src="/images/organizations.svg"/>
+                <Image className="cardImage" src="/images/organizations.svg" alt=''/>
                 <h2 className="cardHeading text-center">Membership Organizations</h2>
             </div>
             <p className="cardContent mt-4 text-center">Our membership management software provides full automation of membership renewals and payments</p>
           </div>
           <div className="card">
             <div>
-                <img className="cardImage" src="/images/associations.svg"/>
+                <Image className="cardImage" src="/images/associations.svg" alt=''/>
                 <h2 className="cardHeading text-center">National Associations</h2>
             </div>
             <p className="cardContent mt-4 text-center">Our membership management software provides full automation of membership renewals and payments</p>
           </div>
           <div className="card">
             <div>
-                <img className="cardImage" src="/images/group.svg"/>
+                <Image className="cardImage" src="/images/group.svg" alt=''/>
                 <h2 className="cardHeading text-center">Clubs And Groups</h2>
             </div>
             <p className="cardContent mt-4 text-center">Our membership management software provides full automation of membership renewals and payments</p>
