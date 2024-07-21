@@ -11,7 +11,7 @@ const Clients = () => {
             </div>
             <div className="clientLogoBox">
                 {clientData.map((data: IClient, index: number) => (
-                    <Image src={data.imageURL} alt="client" key={index} />
+                    <img src={data.imageURL} alt="client" key={index} />
                 )
                 )}
             </div>

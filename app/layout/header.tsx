@@ -26,7 +26,7 @@ const Header = () => {
     <>
       {mounted ? <header className='header'>
         <div className='logo'>
-          <Image src={resolvedTheme == "light" ? '/images/logo.svg' : '/images/logo-white.svg'} alt="logo" />
+          <img src={resolvedTheme == "light" ? '/images/logo.svg' : '/images/logo-white.svg'} alt="logo" />
           <span className='logoText'>Nexcent</span>
         </div>
         <Navbar />
@@ -34,7 +34,7 @@ const Header = () => {
           <button className='loginbutton'>Login</button>
           <button className='signupbutton'>Signup</button>
           <span className='theme'>
-            <Image src={resolvedTheme == "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(resolvedTheme)} alt=''/>
+            <img src={resolvedTheme == "light" ? "/images/mode-light.svg" : "/images/dark-theme.svg"} onClick={() => toggleTheme(resolvedTheme)} alt=''/>
           </span>
         </div>
 

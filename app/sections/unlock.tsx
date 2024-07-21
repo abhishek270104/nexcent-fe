@@ -5,7 +5,7 @@ const Unlock = () => {
     return (
         <section className="unlock">
             <div className='image'>
-                <Image src="/images/authentication.svg" alt=''/>
+                <img src="/images/authentication.svg" alt=''/>
             </div>
             <div className='content'>
                 <h2 className="appMainHeading mx-0 mb-4">The unseen of spending three years at Pixelgrade</h2>

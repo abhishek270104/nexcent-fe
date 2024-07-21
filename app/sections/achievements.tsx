@@ -12,26 +12,26 @@ const Achievements = () => {
             </div>
             <div className='grid grid-cols-2 gap-y-4 gap-x-10 items-center'>
                 <div className='countItem flex'>
-                    <Image src="/images/members.svg" alt="" />
+                    <img src="/images/members.svg" alt="" />
                     <div>
                         <h3>{format(2245341)}</h3>
                         <p>Members</p>
                     </div>
                 </div>
                 <div className='countItem flex'>
-                    <Image src="/images/clubs.svg" alt="" />
+                    <img src="/images/clubs.svg" alt="" />
                     <div>
                         <h3>{format(46328)}</h3>
                         <p>Clubs</p>
                     </div>
                 </div><div className='countItem flex'>
-                    <Image src="/images/event-bookings.svg" alt="" />
+                    <img src="/images/event-bookings.svg" alt="" />
                     <div>
                         <h3>{format(828867)}</h3>
                         <p>Event Bookings</p>
                     </div>
                 </div><div className='countItem flex'>
-                    <Image src="/images/payments.svg" alt="" />
+                    <img src="/images/payments.svg" alt="" />
                     <div>
                         <h3>{format(1926436)}</h3>
                         <p>Payments</p>
